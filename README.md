@@ -1,0 +1,1 @@
+# strain_gauge_monitoring
