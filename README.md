@@ -22,6 +22,7 @@ graph LR
 
     MCU -.->|BLE Ultra-Low Power| Relay
     Relay -.->|LoRa Long Range| GW
+```
 ## 💡 Key Engineering Challenges & Solutions
 
 ### 1. Ultra-Low Power Optimization
