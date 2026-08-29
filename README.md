@@ -19,7 +19,7 @@ A rugged, battery-powered industrial IoT system designed for real-time measureme
     end
 
     MCU -.->|BLE (Ultra-Low Power)| Relay
-    Relay -.->|LoRa (Long Range)| GW```
+    Relay -.->|LoRa (Long Range)| GW
 
 The hardware relies on a distributed wireless architecture to avoid wiring on rotating machinery:
 - **Sensor Node:** Uses a XIAO nRF52840 Sense combined with an HX711 ADC for high-precision strain gauge reading.
