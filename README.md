@@ -6,6 +6,7 @@
 A rugged, battery-powered industrial IoT system designed for real-time measurement of torque, thrust force, and RPM on rotating shafts. The system acquires data directly from the moving components and securely transmits it to a centralized monitoring dashboard.
 
 ## 🏗️ System Architecture
+
 ```mermaid
 graph LR
     subgraph "Rotating Shaft Node (Battery Powered)"
@@ -16,16 +17,11 @@ graph LR
     
     subgraph "Static Infrastructure"
         Relay[BLE to LoRa Relay]
-        GW[Central Dashboard/Gateway]
+        GW[Central Dashboard / Gateway]
     end
 
-    MCU -.->|BLE (Ultra-Low Power)| Relay
-    Relay -.->|LoRa (Long Range)| GW
-
-The hardware relies on a distributed wireless architecture to avoid wiring on rotating machinery:
-- **Sensor Node:** Uses a XIAO nRF52840 Sense combined with an HX711 ADC for high-precision strain gauge reading.
-- **Relay Node:** Captures BLE packets from the rotating shaft and transmits them over long distances via LoRa to the main industrial gateway.
-
+    MCU -.->|BLE Ultra-Low Power| Relay
+    Relay -.->|LoRa Long Range| GW
 ## 💡 Key Engineering Challenges & Solutions
 
 ### 1. Ultra-Low Power Optimization
