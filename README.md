@@ -6,7 +6,8 @@
 A rugged, battery-powered industrial IoT system designed for real-time measurement of torque, thrust force, and RPM on rotating shafts. The system acquires data directly from the moving components and securely transmits it to a centralized monitoring dashboard.
 
 ## 🏗️ System Architecture
-```graph LR
+```mermaid
+graph LR
     subgraph "Rotating Shaft Node (Battery Powered)"
         SG[Strain Gauge] -->|Analog Signal| ADC[HX711 24-bit ADC]
         ADC -->|Digital Data| MCU[XIAO nRF52840 Sense]
